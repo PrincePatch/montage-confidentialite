@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<title>Deleting your data — Montage</title>
+<style>
+  :root{color-scheme:dark;--bg:#0C0D12;--card:#15171F;--ink:#F2F3F7;--muted:#9AA0B2;--line:#2A2E3A;--accent:#FFB547;--marque:#FFB547}
+  *{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.65;font-size:16px}
+  .wrap{max-width:760px;margin:0 auto;padding:40px 22px 80px}
+  header.top{border-bottom:1px solid var(--line);padding-bottom:20px;margin-bottom:8px}
+  .brand{display:flex;align-items:center;gap:13px}
+  .logo{width:40px;height:40px;border-radius:12px;background:var(--card);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+  .logo svg{width:24px;height:24px}
+  h1{font-size:26px;margin:0;letter-spacing:-.3px;line-height:1.25}
+  .maj{color:var(--muted);font-size:14px;margin-top:6px}
+  .langs{margin:18px 0 6px;display:flex;flex-wrap:wrap;gap:8px}
+  .langs button{border:1px solid var(--line);background:transparent;color:var(--ink);padding:6px 14px;border-radius:999px;font-size:14px;cursor:pointer;font-family:inherit;line-height:1.4}
+  .langs button:hover{border-color:var(--accent)}
+  .langs button.actif{background:var(--accent);color:#1A1200;border-color:var(--accent);font-weight:650}
+  h2{font-size:18px;margin:34px 0 8px;padding-top:6px;line-height:1.4}
+  h2 .n{color:var(--accent);font-weight:700;margin-right:6px}
+  p{margin:11px 0}a{color:var(--accent)}strong{font-weight:650}
+  ul,ol{padding-left:22px;margin:11px 0}li{margin:6px 0}
+  .tableau{overflow-x:auto;margin:15px 0;border:1px solid var(--line);border-radius:12px}
+  table{border-collapse:collapse;width:100%;font-size:14.5px;min-width:460px}
+  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{background:var(--card);font-weight:650}tr:last-child td{border-bottom:none}
+  .note{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:15px 17px;margin:16px 0}
+  .note p:first-child{margin-top:0}.note p:last-child{margin-bottom:0}
+  code{background:var(--card);border:1px solid var(--line);padding:1px 6px;border-radius:6px;font-size:13.5px;word-break:break-word}
+  .cartes{margin-top:24px;display:grid;gap:14px}
+  a.carte{display:block;text-decoration:none;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+  a.carte:hover{border-color:var(--accent)}a.carte strong{display:block;color:var(--accent);font-size:17px;margin-bottom:3px}a.carte span{color:var(--muted);font-size:14.5px}
+  footer{margin-top:48px;border-top:1px solid var(--line);padding-top:18px;color:var(--muted);font-size:13.5px}
+  .hidden{display:none}
+</style>
+<!-- Sans JavaScript : seule la version anglaise est visible (les autres portent la classe hidden). -->
+<noscript><style>.langs{display:none}</style></noscript>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand">
+      <span class="logo"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M8 5 L23.6 14.2 L21 15.8 Z" fill="#FFB547"/><path d="M8 5 L8 27 L19.4 20.3 L21.8 16.2 Z" fill="#FFB547"/><path d="M23.4 16.9 L26.5 18.6 L20.6 22.1 Z" fill="#FFB547"/></svg></span>
+      <div>
+        <h1 id="titre">Deleting your data — Montage</h1>
+        <div class="maj" id="maj">Last updated: 22 September 2026</div>
+      </div>
+    </div>
+    <div class="langs">
+      <button id="btn-en" class="actif" onclick="setLang('en')">English</button>
+      <button id="btn-fr" onclick="setLang('fr')">Français</button>
+      <button id="btn-es" onclick="setLang('es')">Español</button>
+      <button id="btn-pt" onclick="setLang('pt')">Português</button>
+      <button id="btn-de" onclick="setLang('de')">Deutsch</button>
+      <button id="btn-it" onclick="setLang('it')">Italiano</button>
+    </div>
+  </header>
+
+  <!-- ============================== EN ============================== -->
+  <main id="en">
+    <p>This page explains how to delete the data held by <strong>Montage</strong> (<code>tel.thibault.montage</code>), a video editor published by an independent developer.</p>
+    <div class="note"><p><strong>No request is needed.</strong> Montage has no account and no server. The developer holds none of your data and has nothing to delete on your behalf. Everything is on your phone, and you erase it yourself.</p></div>
+    <h2><span class="n">1.</span>Delete a project</h2>
+    <p>In <strong>My videos</strong>, press and hold a project and choose <strong>Delete</strong>. This removes the app’s copy of the video, the cuts, texts, music files added, captions, transcripts and synthesized voices of that project. The original video on your phone is not affected.</p>
+    <h2><span class="n">2.</span>Remove the AI models</h2>
+    <p>In <strong>Settings › Manage AI models</strong>, press <strong>Remove</strong> next to a model to delete its file. Google ML Kit’s translation language packs are removed when the app is uninstalled.</p>
+    <h2><span class="n">3.</span>Uninstall the app</h2>
+    <p>Uninstalling Montage removes all of its private storage at once: projects, videos copied into them, models, preferences.</p>
+    <h2><span class="n">4.</span>Exported videos</h2>
+    <p>Videos you exported are in your phone’s gallery (album “Montage”) and are not touched by the steps above. Delete them from the gallery like any other video, and remember any copies you shared elsewhere.</p>
+    <h2><span class="n">5.</span>Contact</h2>
+    <p>Questions: <a href="mailto:support.app.bv@gmail.com">support.app.bv@gmail.com</a>. See also the <a data-page="confidentialite.html" href="confidentialite.html">privacy policy</a>.</p>
+  </main>
+
+  <!-- ============================== FR ============================== -->
+  <main id="fr" class="hidden">
+    <p>Cette page explique comment supprimer les données détenues par <strong>Montage</strong> (<code>tel.thibault.montage</code>), éditeur vidéo édité par un développeur indépendant.</p>
+    <div class="note"><p><strong>Aucune demande n’est nécessaire.</strong> Montage n’a ni compte ni serveur. Le développeur ne détient aucune de vos données et n’a rien à supprimer pour vous. Tout est sur votre téléphone, et vous l’effacez vous-même.</p></div>
+    <h2><span class="n">1.</span>Supprimer un projet</h2>
+    <p>Dans <strong>Mes vidéos</strong>, appuyez longuement sur un projet et choisissez <strong>Supprimer</strong>. Cela retire la copie de la vidéo faite par l’application, les coupes, textes, musiques ajoutées, sous-titres, transcriptions et voix synthétisées de ce projet. La vidéo d’origine sur votre téléphone n’est pas touchée.</p>
+    <h2><span class="n">2.</span>Retirer les modèles IA</h2>
+    <p>Dans <strong>Réglages › Gérer les modèles IA</strong>, appuyez sur <strong>Retirer</strong> à côté d’un modèle pour supprimer son fichier. Les paquets de langue de traduction de Google ML Kit sont retirés à la désinstallation de l’application.</p>
+    <h2><span class="n">3.</span>Désinstaller l’application</h2>
+    <p>Désinstaller Montage efface d’un coup tout son stockage privé : projets, vidéos copiées, modèles, préférences.</p>
+    <h2><span class="n">4.</span>Vidéos exportées</h2>
+    <p>Les vidéos que vous avez exportées sont dans la galerie de votre téléphone (album « Montage ») et ne sont pas concernées par les étapes ci-dessus. Supprimez-les depuis la galerie comme n’importe quelle vidéo, sans oublier les copies partagées ailleurs.</p>
+    <h2><span class="n">5.</span>Contact</h2>
+    <p>Questions : <a href="mailto:support.app.bv@gmail.com">support.app.bv@gmail.com</a>. Voir aussi la <a data-page="confidentialite.html" href="confidentialite.html">politique de confidentialité</a>.</p>
+  </main>
+
+  <!-- ============================== ES ============================== -->
+  <main id="es" class="hidden">
+    <p>Esta página explica cómo eliminar los datos que guarda <strong>Montage</strong> (<code>tel.thibault.montage</code>), editor de vídeo publicado por un desarrollador independiente.</p>
+    <div class="note"><p><strong>No hace falta ninguna solicitud.</strong> Montage no tiene cuenta ni servidor. El desarrollador no posee ninguno de tus datos y no tiene nada que eliminar por ti. Todo está en tu teléfono y lo borras tú mismo.</p></div>
+    <h2><span class="n">1.</span>Eliminar un proyecto</h2>
+    <p>En <strong>Mis vídeos</strong>, mantén pulsado un proyecto y elige <strong>Eliminar</strong>. Se quitan la copia del vídeo hecha por la aplicación, los cortes, textos, músicas añadidas, subtítulos, transcripciones y voces sintetizadas de ese proyecto. El vídeo original de tu teléfono no se modifica.</p>
+    <h2><span class="n">2.</span>Quitar los modelos de IA</h2>
+    <p>En <strong>Ajustes › Gestionar los modelos de IA</strong>, pulsa <strong>Quitar</strong> junto a un modelo para borrar su archivo. Los paquetes de idioma de traducción de Google ML Kit se eliminan al desinstalar la aplicación.</p>
+    <h2><span class="n">3.</span>Desinstalar la aplicación</h2>
+    <p>Desinstalar Montage elimina de una vez todo su almacenamiento privado: proyectos, vídeos copiados, modelos, preferencias.</p>
+    <h2><span class="n">4.</span>Vídeos exportados</h2>
+    <p>Los vídeos que exportaste están en la galería de tu teléfono (álbum «Montage») y no se ven afectados por los pasos anteriores. Bórralos desde la galería como cualquier vídeo, sin olvidar las copias compartidas en otros sitios.</p>
+    <h2><span class="n">5.</span>Contacto</h2>
+    <p>Preguntas: <a href="mailto:support.app.bv@gmail.com">support.app.bv@gmail.com</a>. Véase también la <a data-page="confidentialite.html" href="confidentialite.html">política de privacidad</a>.</p>
+  </main>
+
+  <!-- ============================== PT ============================== -->
+  <main id="pt" class="hidden">
+    <p>Esta página explica como eliminar os dados guardados por <strong>Montage</strong> (<code>tel.thibault.montage</code>), editor de vídeo publicado por um programador independente.</p>
+    <div class="note"><p><strong>Não é preciso qualquer pedido.</strong> Montage não tem conta nem servidor. O programador não possui nenhum dos seus dados e não tem nada para eliminar por si. Tudo está no seu telemóvel e é você que o apaga.</p></div>
+    <h2><span class="n">1.</span>Eliminar um projeto</h2>
+    <p>Em <strong>Os meus vídeos</strong>, mantenha premido um projeto e escolha <strong>Eliminar</strong>. Isto remove a cópia do vídeo feita pela aplicação, os cortes, textos, músicas adicionadas, legendas, transcrições e vozes sintetizadas desse projeto. O vídeo original no seu telemóvel não é alterado.</p>
+    <h2><span class="n">2.</span>Remover os modelos de IA</h2>
+    <p>Em <strong>Definições › Gerir os modelos de IA</strong>, carregue em <strong>Remover</strong> junto a um modelo para apagar o ficheiro. Os pacotes de idioma de tradução do Google ML Kit são removidos ao desinstalar a aplicação.</p>
+    <h2><span class="n">3.</span>Desinstalar a aplicação</h2>
+    <p>Desinstalar Montage apaga de uma vez todo o seu armazenamento privado: projetos, vídeos copiados, modelos, preferências.</p>
+    <h2><span class="n">4.</span>Vídeos exportados</h2>
+    <p>Os vídeos que exportou estão na galeria do seu telemóvel (álbum «Montage») e não são afetados pelos passos acima. Apague-os na galeria como qualquer vídeo, sem esquecer as cópias partilhadas noutros sítios.</p>
+    <h2><span class="n">5.</span>Contacto</h2>
+    <p>Perguntas: <a href="mailto:support.app.bv@gmail.com">support.app.bv@gmail.com</a>. Veja também a <a data-page="confidentialite.html" href="confidentialite.html">política de privacidade</a>.</p>
+  </main>
+
+  <!-- ============================== DE ============================== -->
+  <main id="de" class="hidden">
+    <p>Diese Seite erklärt, wie Sie die von <strong>Montage</strong> (<code>tel.thibault.montage</code>) gespeicherten Daten löschen, einer Videoschnitt-App eines unabhängigen Entwicklers.</p>
+    <div class="note"><p><strong>Kein Antrag nötig.</strong> Montage hat kein Konto und keinen Server. Der Entwickler besitzt keine Ihrer Daten und hat nichts, was er für Sie löschen könnte. Alles liegt auf Ihrem Telefon, und Sie löschen es selbst.</p></div>
+    <h2><span class="n">1.</span>Ein Projekt löschen</h2>
+    <p>Halten Sie unter <strong>Meine Videos</strong> ein Projekt gedrückt und wählen Sie <strong>Löschen</strong>. Damit werden die Videokopie der App, die Schnitte, Texte, hinzugefügte Musik, Untertitel, Transkripte und synthetisierten Stimmen dieses Projekts entfernt. Das Originalvideo auf Ihrem Telefon bleibt unverändert.</p>
+    <h2><span class="n">2.</span>KI-Modelle entfernen</h2>
+    <p>Tippen Sie unter <strong>Einstellungen › KI-Modelle verwalten</strong> neben einem Modell auf <strong>Entfernen</strong>, um dessen Datei zu löschen. Die Sprachpakete der Google-ML-Kit-Übersetzung werden beim Deinstallieren der App entfernt.</p>
+    <h2><span class="n">3.</span>Die App deinstallieren</h2>
+    <p>Das Deinstallieren von Montage entfernt den gesamten privaten Speicher auf einmal: Projekte, kopierte Videos, Modelle, Einstellungen.</p>
+    <h2><span class="n">4.</span>Exportierte Videos</h2>
+    <p>Exportierte Videos liegen in der Galerie Ihres Telefons (Album „Montage“) und sind von den obigen Schritten nicht betroffen. Löschen Sie sie in der Galerie wie jedes andere Video — und denken Sie an Kopien, die Sie anderswo geteilt haben.</p>
+    <h2><span class="n">5.</span>Kontakt</h2>
+    <p>Fragen: <a href="mailto:support.app.bv@gmail.com">support.app.bv@gmail.com</a>. Siehe auch die <a data-page="confidentialite.html" href="confidentialite.html">Datenschutzerklärung</a>.</p>
+  </main>
+
+  <!-- ============================== IT ============================== -->
+  <main id="it" class="hidden">
+    <p>Questa pagina spiega come cancellare i dati conservati da <strong>Montage</strong> (<code>tel.thibault.montage</code>), editor video pubblicato da uno sviluppatore indipendente.</p>
+    <div class="note"><p><strong>Nessuna richiesta è necessaria.</strong> Montage non ha account né server. Lo sviluppatore non possiede alcun tuo dato e non ha nulla da cancellare per te. Tutto è sul tuo telefono, e lo cancelli tu stesso.</p></div>
+    <h2><span class="n">1.</span>Eliminare un progetto</h2>
+    <p>In <strong>I miei video</strong>, tieni premuto un progetto e scegli <strong>Elimina</strong>. Questo rimuove la copia del video fatta dall’app, i tagli, i testi, le musiche aggiunte, i sottotitoli, le trascrizioni e le voci sintetizzate di quel progetto. Il video originale sul tuo telefono non viene toccato.</p>
+    <h2><span class="n">2.</span>Rimuovere i modelli IA</h2>
+    <p>In <strong>Impostazioni › Gestisci i modelli IA</strong>, premi <strong>Rimuovi</strong> accanto a un modello per cancellarne il file. I pacchetti lingua di traduzione di Google ML Kit vengono rimossi alla disinstallazione dell’app.</p>
+    <h2><span class="n">3.</span>Disinstallare l’app</h2>
+    <p>Disinstallare Montage cancella in una volta tutto il suo archivio privato: progetti, video copiati, modelli, preferenze.</p>
+    <h2><span class="n">4.</span>Video esportati</h2>
+    <p>I video che hai esportato sono nella galleria del telefono (album «Montage») e non sono toccati dai passaggi sopra. Cancellali dalla galleria come qualsiasi video, senza dimenticare le copie condivise altrove.</p>
+    <h2><span class="n">5.</span>Contatto</h2>
+    <p>Domande: <a href="mailto:support.app.bv@gmail.com">support.app.bv@gmail.com</a>. Vedi anche l’<a data-page="confidentialite.html" href="confidentialite.html">informativa sulla privacy</a>.</p>
+  </main>
+
+
+  <footer>
+    <span id="pied">Montage — published by an independent developer. These pages are linked from the Google Play listing and from the app’s Settings screen.</span>
+    — <a href="mailto:support.app.bv@gmail.com">support.app.bv@gmail.com</a>
+  </footer>
+</div>
+<script>
+// Les six versions sont dans le DOM ; le script en montre une. Aucune requête externe.
+var LANGUES = ['en', 'fr', 'es', 'pt', 'de', 'it'];
+var TITRES = {en:'Deleting your data — Montage',fr:'Suppression de vos données — Montage',es:'Eliminación de tus datos — Montage',pt:'Eliminação dos seus dados — Montage',de:'Löschung Ihrer Daten — Montage',it:'Cancellazione dei tuoi dati — Montage'};
+var MAJ = {en:'Last updated: 22 September 2026',fr:'Dernière mise à jour : 22 septembre 2026',es:'Última actualización: 22 de septiembre de 2026',pt:'Última atualização: 22 de setembro de 2026',de:'Zuletzt aktualisiert: 22. September 2026',it:'Ultimo aggiornamento: 22 settembre 2026'};
+var PIED = {en:'Montage — published by an independent developer. These pages are linked from the Google Play listing and from the app’s Settings screen.',fr:'Montage — édité par un développeur indépendant. Ces pages sont référencées par la fiche Google Play et par l’écran Réglages de l’application.',es:'Montage — publicada por un desarrollador independiente. Estas páginas están enlazadas desde la ficha de Google Play y desde la pantalla Ajustes de la aplicación.',pt:'Montage — publicada por um programador independente. Estas páginas estão ligadas à ficha do Google Play e ao ecrã Definições da aplicação.',de:'Montage — herausgegeben von einem unabhängigen Entwickler. Diese Seiten sind aus dem Google-Play-Eintrag und aus den Einstellungen der App verlinkt.',it:'Montage — pubblicata da uno sviluppatore indipendente. Queste pagine sono collegate dalla scheda Google Play e dalla schermata Impostazioni dell’app.'};
+function setLang(l){
+  if (LANGUES.indexOf(l) === -1) l = 'en';
+  for (var i = 0; i < LANGUES.length; i++){
+    var x = LANGUES[i];
+    document.getElementById(x).classList.toggle('hidden', x !== l);
+    document.getElementById('btn-' + x).classList.toggle('actif', x === l);
+  }
+  document.documentElement.lang = l;
+  document.title = TITRES[l];
+  document.getElementById('titre').textContent = TITRES[l];
+  document.getElementById('maj').textContent = MAJ[l];
+  document.getElementById('pied').textContent = PIED[l];
+  var liens = document.querySelectorAll('a[data-page]');
+  for (var j = 0; j < liens.length; j++){
+    liens[j].setAttribute('href', liens[j].getAttribute('data-page') + '?lang=' + l);
+  }
+}
+(function(){
+  var q = (new URLSearchParams(location.search).get('lang') || '').slice(0,2).toLowerCase();
+  if (LANGUES.indexOf(q) !== -1) { setLang(q); return; }
+  var dispo = (navigator.languages && navigator.languages.length) ? navigator.languages : [navigator.language || 'en'];
+  for (var i = 0; i < dispo.length; i++){
+    var p = String(dispo[i]).slice(0,2).toLowerCase();
+    if (LANGUES.indexOf(p) !== -1) { setLang(p); return; }
+  }
+  setLang('en');
+})();
+</script>
+</body>
+</html>
